@@ -13,6 +13,11 @@ const Home: NextPage = () => {
       <Head>
         <title>stealthy website</title>
         <link rel="icon" href="/stealthysmile.ico"/>
+        <meta content="Stealthy.dev" property="og:title"/>
+        <meta content="Welcome to the website of stealthninja. Welcome home." property="og:description"/>
+        <meta content="https://stealthy-dev.vercel.app/" property="og:url"/>
+        <meta content="https://stealthy-dev.vercel.app/stealthysmile.png" property="og:image"/>
+        <meta content="#000000" data-react-helmet="true" name="theme-color" />
       </Head>
       <div className="bg-black text-white h-screen scrollbar scrollbar-thumb-black scrollbar-track-gray-900">
         <div>

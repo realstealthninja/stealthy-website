@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         <meta content="https://stealthy-dev.vercel.app/stealthysmile.png" property="og:image"/>
         <meta content="#000000" data-react-helmet="true" name="theme-color" />
       </Head>
-      <div className="bg-black text-white h-screen scrollbar scrollbar-thumb-black scrollbar-track-gray-900">
+      <div className="bg-black text-white h-screen scrollbar  scrollbar-thumb-black scrollbar-track-gray-900 ">
         <div>
           <ul>
             <li className="inline ml-5 mt-5 fa-github">
@@ -28,7 +28,9 @@ const Home: NextPage = () => {
               </Link>
             </li>
             <li className="inline ml-5 mt-5">
+              <Link href="https://www.instagram.com/realstealthninja/">
               <FontAwesomeIcon icon={faInstagram} size="lg" />
+              </Link>
             </li>
             <li className="inline ml-5 mt-5">
               <Link href="https://www.youtube.com/channel/UCRBu1hybrrioa8hZc5_Ggig">
@@ -52,7 +54,7 @@ const Home: NextPage = () => {
             <HomeCard
               name="stealthy bot"
               banner="/stealthybot.png"
-              text="stealthy bot is a discord general bot, it has many features. This was the first project ive ever worked on very hard. still alot more to do tho."
+              text="stealthy bot is a discord general bot, it has many features. This was the first project ive ever worked on. still alot more to do tho."
               onClickEvent={
                 () => {
                   window.location.replace("https://github.com/realstealthninja/Stealthybot");

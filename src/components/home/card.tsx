@@ -13,7 +13,7 @@ const HomeCard = (
     { name, text, banner, onClickEvent }: HomeCardInterface) => {
     return (
         <div className="ml-5 mt-5 max-w-sm rounded-md overflow-hidden shadow-lg bg-slate-900 basis-1/3">
-            <Image className="w-full object-contain" src={banner}/>
+            <Image height="1" width="2" layout="responsive" src={banner}/>
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{name}</div>
                 <p className="text-gray-700 text-base">

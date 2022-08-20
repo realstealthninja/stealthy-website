@@ -1,13 +1,15 @@
 import type { NextPage } from "next"
 import Head from "next/head"
 import Typewriter from "typewriter-effect"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons"
-import Link from "next/link"
-import Image from "next/image"
 import HomeCard from "../components/home/card"
+import NavBar from "../components/nav"
 
 const Home: NextPage = () => {
+
+  function removeHeight(event: React.MouseEvent) {
+    (event.currentTarget as Element)?.classList.replace("h-screen", "h-[50vh]")
+  }
+
   return (
     <>
       <Head>
@@ -19,37 +21,21 @@ const Home: NextPage = () => {
         <meta content="https://stealthy-dev.vercel.app/stealthysmile.png" property="og:image"/>
         <meta content="#000000" data-react-helmet="true" name="theme-color" />
       </Head>
-      <div className="bg-black text-white h-screen scrollbar  scrollbar-thumb-black scrollbar-track-gray-900 ">
-        <div>
-          <ul>
-            <li className="inline ml-5 mt-5 fa-github">
-              <Link href="https://github.com/realstealthninja">
-                <FontAwesomeIcon icon={faGithub} size="lg" />
-              </Link>
-            </li>
-            <li className="inline ml-5 mt-5">
-              <Link href="https://www.instagram.com/realstealthninja/">
-              <FontAwesomeIcon icon={faInstagram} size="lg" />
-              </Link>
-            </li>
-            <li className="inline ml-5 mt-5">
-              <Link href="https://www.youtube.com/channel/UCRBu1hybrrioa8hZc5_Ggig">
-                <FontAwesomeIcon icon={faYoutube} size="lg" />
-              </Link>
-            </li>
-            <li className="float-right mr-5"><Image src="/stealthysmile.png" width="30px" height="10px" /></li>
-          </ul>
-        </div>
-        <div className="text-5xl flex items-center justify-center h-screen bg-black">
+      <div className="bg-slate-900 text-white h-screen scrollbar  scrollbar-thumb-black scrollbar-track-gray-900 ">
+      
+      <NavBar/>
+
+        <div onMouseOver={removeHeight} className="transition-[height] ease-in-out hover:h-[50vh] ml-10 text-5xl flex items-center justify-center h-screen bg-slate-900">
           <Typewriter options={{
             strings: ["Programming", "Gaming", "Designing", "[{Stealthy.dev}]", "stealthninja"],
             autoStart: true,
             loop: true,
           }} />
         </div>
+
         <div className="text-4xl text-center bg-black">
           <h1>Projects</h1>
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row bg-black">
 
             <HomeCard
               name="stealthy bot"

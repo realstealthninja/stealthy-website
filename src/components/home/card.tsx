@@ -1,6 +1,5 @@
-import { NextComponentType } from "next";
 import { Dispatch } from "react";
-
+import Image from "next/image"
 
 interface HomeCardInterface {
     text: string;
@@ -14,7 +13,7 @@ const HomeCard = (
     { name, text, banner, onClickEvent }: HomeCardInterface) => {
     return (
         <div className="ml-5 mt-5 max-w-sm rounded-md overflow-hidden shadow-lg bg-slate-900 basis-1/3">
-            <img className="w-full object-contain" src={banner}/>
+            <Image className="w-full object-contain" src={banner}/>
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{name}</div>
                 <p className="text-gray-700 text-base">

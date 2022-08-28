@@ -46,8 +46,8 @@ const About: NextPage = () => {
             computers in general that is.
             <br />
             <br />
-            I've always been one of them developers who always wanted to make a
-            game but didnt know how. It's been on my bucket list.
+            I&apos;ve always been one of them developers who always wanted to make a
+            game but didnt know how. It&apos;s been on my bucket list.
             As of my experience; I initially started as a roblox developer with
             lua as my lanugage of choice. Slowly but surely i switched over to 
             python. I did try C# inbetween Python and Lua though it didnt go as
